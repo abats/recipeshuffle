@@ -1,248 +1,89 @@
 <template>
-<div class="container my-12 mx-auto px-4 md:px-12">
-    <div class="flex flex-wrap -mx-1 lg:-mx-4">
+<div class="flex flex-wrap">
+  <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4 bg-gray-500">
 
-        <!-- Column -->
-        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-
-            <!-- Article -->
-            <article class="overflow-hidden rounded-lg shadow-lg">
-
-                <a href="#">
-                    <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                </a>
-
-                <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                    <h1 class="text-lg">
-                        <a class="no-underline hover:underline text-black" href="#">
-                            Article Title
-                        </a>
-                    </h1>
-                    <p class="text-grey-darker text-sm">
-                        11/1/19
-                    </p>
-                </header>
-
-                <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                    <a class="flex items-center no-underline hover:underline text-black" href="#">
-                        <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                        <p class="ml-2 text-sm">
-                            Author Name
-                        </p>
-                    </a>
-                    <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                        <span class="hidden">Like</span>
-                        <i class="fa fa-heart"></i>
-                    </a>
-                </footer>
-
-            </article>
-            <!-- END Article -->
-
+    <div class="md:mt-6 max-w-xl md:bg-white rounded-lg md:m-5 md:mt-5">
+        <div class="md:flex-shrink-0">
+        <img class="rounded-lg rounded-b-none" src="@/assets/image/recipe.jpg" alt="something delicious">
         </div>
-        <!-- END Column -->
-
-        <!-- Column -->
-        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-
-            <!-- Article -->
-            <article class="overflow-hidden rounded-lg shadow-lg">
-
-                <a href="#">
-                    <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                </a>
-
-                <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                    <h1 class="text-lg">
-                        <a class="no-underline hover:underline text-black" href="#">
-                            Article Title
-                        </a>
-                    </h1>
-                    <p class="text-grey-darker text-sm">
-                        11/1/19
-                    </p>
-                </header>
-
-                <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                    <a class="flex items-center no-underline hover:underline text-black" href="#">
-                        <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                        <p class="ml-2 text-sm">
-                            Author Name
-                        </p>
-                    </a>
-                    <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                        <span class="hidden">Like</span>
-                        <i class="fa fa-heart"></i>
-                    </a>
-                </footer>
-
-            </article>
-            <!-- END Article -->
-
+        <div class="mt-4 md:mt-0 md:ml-6">
+        <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">Super recipe</div>
+        <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">This is super delicious and will take you only 20 minutes to make</a>
+        <p class="mt-2 text-gray-600">Bla die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh </p>
         </div>
-        <!-- END Column -->
-
-        <!-- Column -->
-        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-
-            <!-- Article -->
-            <article class="overflow-hidden rounded-lg shadow-lg">
-
-                <a href="#">
-                    <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                </a>
-
-                <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                    <h1 class="text-lg">
-                        <a class="no-underline hover:underline text-black" href="#">
-                            Article Title
-                        </a>
-                    </h1>
-                    <p class="text-grey-darker text-sm">
-                        11/1/19
-                    </p>
-                </header>
-
-                <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                    <a class="flex items-center no-underline hover:underline text-black" href="#">
-                        <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                        <p class="ml-2 text-sm">
-                            Author Name
-                        </p>
-                    </a>
-                    <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                        <span class="hidden">Like</span>
-                        <i class="fa fa-heart"></i>
-                    </a>
-                </footer>
-
-            </article>
-            <!-- END Article -->
-
-        </div>
-        <!-- END Column -->
-
-        <!-- Column -->
-        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-
-            <!-- Article -->
-            <article class="overflow-hidden rounded-lg shadow-lg">
-
-                <a href="#">
-                    <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                </a>
-
-                <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                    <h1 class="text-lg">
-                        <a class="no-underline hover:underline text-black" href="#">
-                            Article Title
-                        </a>
-                    </h1>
-                    <p class="text-grey-darker text-sm">
-                        11/1/19
-                    </p>
-                </header>
-
-                <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                    <a class="flex items-center no-underline hover:underline text-black" href="#">
-                        <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                        <p class="ml-2 text-sm">
-                            Author Name
-                        </p>
-                    </a>
-                    <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                        <span class="hidden">Like</span>
-                        <i class="fa fa-heart"></i>
-                    </a>
-                </footer>
-
-            </article>
-            <!-- END Article -->
-
-        </div>
-        <!-- END Column -->
-
-        <!-- Column -->
-        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-
-            <!-- Article -->
-            <article class="overflow-hidden rounded-lg shadow-lg">
-
-                <a href="#">
-                    <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                </a>
-
-                <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                    <h1 class="text-lg">
-                        <a class="no-underline hover:underline text-black" href="#">
-                            Article Title
-                        </a>
-                    </h1>
-                    <p class="text-grey-darker text-sm">
-                        11/1/19
-                    </p>
-                </header>
-
-                <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                    <a class="flex items-center no-underline hover:underline text-black" href="#">
-                        <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                        <p class="ml-2 text-sm">
-                            Author Name
-                        </p>
-                    </a>
-                    <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                        <span class="hidden">Like</span>
-                        <i class="fa fa-heart"></i>
-                    </a>
-                </footer>
-
-            </article>
-            <!-- END Article -->
-
-        </div>
-        <!-- END Column -->
-
-        <!-- Column -->
-        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
-
-            <!-- Article -->
-            <article class="overflow-hidden rounded-lg shadow-lg">
-
-                <a href="#">
-                    <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                </a>
-
-                <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                    <h1 class="text-lg">
-                        <a class="no-underline hover:underline text-black" href="#">
-                            Article Title
-                        </a>
-                    </h1>
-                    <p class="text-grey-darker text-sm">
-                        11/1/19
-                    </p>
-                </header>
-
-                <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                    <a class="flex items-center no-underline hover:underline text-black" href="#">
-                        <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                        <p class="ml-2 text-sm">
-                            Author Name
-                        </p>
-                    </a>
-                    <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                        <span class="hidden">Like</span>
-                        <i class="fa fa-heart"></i>
-                    </a>
-                </footer>
-
-            </article>
-            <!-- END Article -->
-
-        </div>
-        <!-- END Column -->
-
     </div>
+
+  </div>
+  <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4 bg-gray-400">
+  
+    <div class="md:mt-6 max-w-xl md:bg-white rounded-lg md:m-5 md:mt-5">
+        <div class="md:flex-shrink-0">
+        <img class="rounded-lg md:w-56" src="@/assets/image/recipe.jpg" alt="something delicious">
+        </div>
+        <div class="mt-4 md:mt-0 md:ml-6">
+        <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">Super recipe</div>
+        <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">This is super delicious and will take you only 20 minutes to make</a>
+        <p class="mt-2 text-gray-600">Bla die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh </p>
+        </div>
+    </div>
+  
+  </div>
+  <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4 bg-gray-500">
+  
+    <div class="md:mt-6 max-w-xl md:bg-white rounded-lg md:m-5 md:mt-5">
+        <div class="md:flex-shrink-0">
+        <img class="rounded-lg md:w-56" src="@/assets/image/recipe.jpg" alt="something delicious">
+        </div>
+        <div class="mt-4 md:mt-0 md:ml-6">
+        <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">Super recipe</div>
+        <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">This is super delicious and will take you only 20 minutes to make</a>
+        <p class="mt-2 text-gray-600">Bla die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh </p>
+        </div>
+    </div>  
+  
+  </div>
+  <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4 bg-gray-400">
+  
+    <div class=" md:mt-6 max-w-xl md:bg-white rounded-lg md:m-5 md:mt-5">
+        <div class="md:flex-shrink-0">
+        <img class="rounded-lg md:w-56" src="@/assets/image/recipe.jpg" alt="something delicious">
+        </div>
+        <div class="mt-4 md:mt-0 md:ml-6">
+        <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">Super recipe</div>
+        <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">This is super delicious and will take you only 20 minutes to make</a>
+        <p class="mt-2 text-gray-600">Bla die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh </p>
+        </div>
+    </div>  
+  
+  </div>
+  <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/2 xl:w-1/6 mb-4 bg-gray-500">
+  
+    <div class=" md:mt-6 max-w-xl md:bg-white rounded-lg md:m-5 md:mt-5">
+        <div class="md:flex-shrink-0">
+        <img class="rounded-lg md:w-56" src="@/assets/image/recipe.jpg" alt="something delicious">
+        </div>
+        <div class="mt-4 md:mt-0 md:ml-6">
+        <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">Super recipe</div>
+        <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">This is super delicious and will take you only 20 minutes to make</a>
+        <p class="mt-2 text-gray-600">Bla die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh </p>
+        </div>
+    </div>    
+  
+  </div>
+  <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/2 xl:w-1/6 mb-4 bg-gray-400">
+  
+    <div class=" md:mt-6 max-w-xl md:bg-white rounded-lg md:m-5 md:mt-5">
+        <div class="md:flex-shrink-0">
+        <img class="rounded-lg md:w-56" src="@/assets/image/recipe.jpg" alt="something delicious">
+        </div>
+        <div class="mt-4 md:mt-0 md:ml-6">
+        <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">Super recipe</div>
+        <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">This is super delicious and will take you only 20 minutes to make</a>
+        <p class="mt-2 text-gray-600">Bla die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh die bla die blaaahhh </p>
+        </div>
+    </div>    
+
+  </div>
 </div>
 </template>
 
