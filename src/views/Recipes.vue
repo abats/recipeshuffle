@@ -31,7 +31,10 @@ export default class Recipes extends Vue {
     }
 
 	private mounted() {
-		console.log('Mount recipes');
+        console.log('Mount recipes');
+        console.log(process.env.NODE_ENV)
+        console.log(process.env.VUE_APP_TEST)
+        console.log(process.env.TEST)
     }
 }
 
