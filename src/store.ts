@@ -1,38 +1,10 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { db } from '@/main';
+import { db, dbRS } from '@/main';
 
 Vue.use(Vuex);
 
-const moduleA = {
-    state: {
-        items: [] as any[],
-    },
-    getters: {
-        getItems: (state: { items: any; }) => {
-            return state.items;
-        },
-    },
-    mutations: {
-        setItems: (state: { items: any[]; }) => {
-            let items: any[] = [];
-            db.collection('items').orderBy('created_at').onSnapshot((snapshot) => {
-                items = [];
-                snapshot.forEach((doc) => {
-                    items.push({ id: doc.id, title: doc.data().title });
-                });
-                state.items = items;
-            });
-        },
-    },
-    actions: {
-        setItems: (context: { commit: (arg0: string) => void; }) => {
-            context.commit('setItems');
-        },
-    },
-};
-
-const moduleB = {
+const recipes = {
     state: {
         recipes: [] as any[],
     },
@@ -42,14 +14,14 @@ const moduleB = {
         },
     },
     mutations: {
-        setItems: (state: { items: any[]; }) => {
+        setItems: (state: { recipes: any[]; }) => {
             let items: any[] = [];
-            db.collection('recipes').onSnapshot((snapshot) => {
+            dbRS.collection('recipes').onSnapshot((snapshot) => {
                 items = [];
                 snapshot.forEach((doc) => {
                     items.push({ id: doc.id, title: doc.data().title });
                 });
-                state.items = items;
+                state.recipes = items;
             });
         },
     },
@@ -58,12 +30,11 @@ const moduleB = {
             context.commit('setItems');
         },
     },
-}
+};
 
 export default new Vuex.Store({
     modules: {
-        a: moduleA,
-        b: moduleB,
-    }
+        recipes: recipes,
+    },
 });
 

@@ -1,27 +1,17 @@
 <template>
 <div class="ml-5">
-    <h3 class="mt-5 font-bold">Temp list</h3>
-    <div v-for="item in this.$store.getters.getItems" :key="item.id">
-       {{ item.title }}<br /><br /><small style="text-decoration:underline;" @click="deleteItem(item.id)">Delete</small>
-       <hr />
-    </div>
-
-    <div v-for="recipe in this.$store.getters.getRecipes" :key="recipe.id">
-       {{ recipe.title }}<br /><br /><small style="text-decoration:underline;" @click="deleteItem(recipe.id)">Delete</small>
-       <hr />
-    </div>
-
     <h3 class="mt-5 font-bold">Add recipe</h3>
     <input class="border border-gray-500 mt-3 mr-3 p-2" v-model="recipeToAdd" />
     <button @click="addRecipe" class="bg-gray-400 border border-gray-500 p-2">Add recipe</button>
     <h3 class="mt-5 font-bold">Recipe list</h3>
 
-    <div v-for="recipe in recipeList" v-bind:key="recipe.id" class="mr-5 inline-block max-w-xs rounded-lg overflow-hidden shadow-lg my-2 bg-gray-200 border border-gray-400">
+    <div v-for="recipe in this.$store.getters.getRecipes" :key="recipe.id" class="mr-5 inline-block max-w-xs rounded-lg overflow-hidden shadow-lg my-2 bg-gray-200 border border-gray-400">
         <img class="w-full" src="@/assets/image/recipe.jpg">
         <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">{{ recipe }}</div>
+            <button class="float-right" @click="deleteRecipe(recipe.id)">X</button>
+            <div class="font-bold text-xl mb-2">{{ recipe.title }}</div>
             <p class="text-grey-darker text-base">
-            There will be some description here
+              There will be some description here
             </p>
         </div>
     </div>
@@ -30,45 +20,44 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { db } from '@/main'
-import store from "@/store";
+import { db, dbRS } from '@/main';
 
 @Component({})
 export default class Recipes extends Vue {
     private recipeList: any[] = [];
     private recipeToAdd: string = '';
-    private myTodo: string = '';
     private errors: string = '';
 
-    beforeCreate() {
-        console.log('before create');
-        this.$store.dispatch('setItems');
+    private beforeCreate() {
+        this.$store.dispatch('setRecipes');
     }
 
-    addToDo() {
-      this.errors = "";
-      if (this.myTodo !== "") {
-        db.collection("items")
+    private addRecipe() {
+      this.errors = '';
+      if (this.recipeToAdd !== '') {
+        dbRS.collection('recipes')
           .add({
-            title: this.myTodo,
-            created_at: Date.now()
+            title: this.recipeToAdd,
+            date: Date.now(),
+            description: 'description',
           })
-          .then(response => {
+          .then( (response) => {
             if (response) {
-              this.myTodo = "";
+              this.recipeToAdd = '';
             }
           })
-          .catch(error => {
+          .catch( (error) => {
             this.errors = error;
           });
       } else {
-        this.errors = "Please enter some text";
+        this.errors = 'Please enter some text';
       }
     }
 
-    deleteItem(id) {
+    deleteRecipe(id: string) {
+      console.log('id: ' + id);
       if (id) {
-        db.collection("items").doc(id).delete().then(function() {
+        dbRS.collection("recipes").doc(id).delete().then(function() {
           console.log('Document successfully deleted')
         }).catch(function(error) {
           // this.error = error
@@ -78,16 +67,9 @@ export default class Recipes extends Vue {
       }
     }
 
-    private addRecipe() {
-        console.log('My recipe add: ' + this.recipeToAdd);
-        this.recipeList.push(this.recipeToAdd);
-    }
-
-	private mounted() {
-        console.log('Mount recipes');
-        console.log(process.env.NODE_ENV)
-        console.log(process.env.VUE_APP_TEST)
-        console.log(process.env.TEST)
+    private mounted() {
+        // console.log('Mount recipes');
+        // console.log(process.env.VUE_APP_GOOGLE_ID)
     }
 }
 

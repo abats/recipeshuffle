@@ -30,9 +30,10 @@ const firebaseConfigRS = {
 };
 
 firebase.initializeApp(config);
-firebase.initializeApp(firebaseConfigRS, 'secondary');
+let secondary = firebase.initializeApp(firebaseConfigRS, 'secondary');
+
 export const db = firebase.firestore();
-export const dbRS = firebase.firestore();
+export const dbRS = secondary.firestore();
 
 new Vue({
   router,

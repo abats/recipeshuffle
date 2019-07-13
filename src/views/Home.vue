@@ -1,8 +1,5 @@
 <template>
 <div class="md:bg-gray-400 m-5">
-  <div class="ml-5">
-    <span v-html="items.bpi.USD.symbol"></span>{{ items.bpi.USD.rate }}
-  </div>
   <div class="md:flex md:mt-6 max-w-xl md:bg-white rounded-lg md:m-5 md:mt-5">
     <div class="md:flex-shrink-0">
       <img class="rounded-lg md:w-56" src="@/assets/image/recipe.jpg" alt="something delicious">
@@ -45,17 +42,16 @@ import { AxiosResponse } from 'axios';
 
 @Component({})
 export default class Home extends Vue {
-  private items: any[]= [];
+    private items: any [] = [];
 
-	private created() {
-		this.$http.get('https://api.coindesk.com/v1/bpi/currentprice.json').then((response: AxiosResponse) => {
-      this.items = response.data;
-		});
-	}
+    private created() {
+      this.$http.get('https://api.coindesk.com/v1/bpi/currentprice.json').then((response: AxiosResponse) => {
+        this.items = response.data;
+      });
+    }
 
-	private mounted() {
-		console.log('Mount home');
-	}
+    private mounted() {
+    }
 }
 
 
