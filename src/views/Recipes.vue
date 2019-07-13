@@ -1,6 +1,6 @@
 <template>
-<div class="ml-5">
-    <h3 class="mt-5 font-bold">Add recipe</h3>
+<div class="ml-5 mt-5">
+    <h3 class="font-bold">Add recipe</h3>
     <input class="border border-gray-500 mt-3 mr-3 p-2" v-model="recipeToAdd" />
     <button @click="addRecipe" class="bg-gray-400 border border-gray-500 p-2">Add recipe</button>
     <h3 class="mt-5 font-bold">Recipe list</h3>
