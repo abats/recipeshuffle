@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { db, dbRS } from '@/main';
+import { dbRS } from '@/main';
 
 Vue.use(Vuex);
 

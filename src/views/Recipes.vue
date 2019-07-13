@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import { db, dbRS } from '@/main';
+import { dbRS } from '@/main';
 
 @Component({})
 export default class Recipes extends Vue {

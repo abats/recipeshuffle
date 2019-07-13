@@ -10,15 +10,6 @@ import store from './store';
 Vue.config.productionTip = false;
 Vue.use(VueAxios, axios);
 
-const config = {
-  apiKey: 'AIzaSyA73SfvyG9JKCuAWT6FcU-h8Ql3GMjumWY',
-  authDomain: '',
-  databaseURL: '',
-  projectId: 'to-do-list-a7092',
-  storageBucket: '',
-  messagingSenderId: '',
-};
-
 const firebaseConfigRS = {
   apiKey: 'AIzaSyCEhCakUhiglU5Zwv1psNGSjWnLz8ohcz8',
   authDomain: 'recipe-shuffle.firebaseapp.com',
@@ -29,10 +20,8 @@ const firebaseConfigRS = {
   appId: '1:221191313780:web:4310bb4166e75601',
 };
 
-firebase.initializeApp(config);
 let secondary = firebase.initializeApp(firebaseConfigRS, 'secondary');
 
-export const db = firebase.firestore();
 export const dbRS = secondary.firestore();
 
 new Vue({
