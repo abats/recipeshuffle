@@ -20,12 +20,29 @@ const firebaseConfigRS = {
   appId: '1:221191313780:web:4310bb4166e75601',
 };
 
-let secondary = firebase.initializeApp(firebaseConfigRS, 'secondary');
+let firebaseApp = firebase.initializeApp(firebaseConfigRS);
+let app;
 
-export const dbRS = secondary.firestore();
+export const dbRS = firebaseApp.firestore();
+export let userLoggedIn = false;
 
-new Vue({
-  router,
-  store,
-  render: (h) => h(App),
-}).$mount('#app');
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    userLoggedIn = true;
+    console.log('user is logged in, here it is: ');
+    console.log(user);
+  } else {
+    userLoggedIn = false;
+    console.log('not logged in');
+  }
+});
+
+firebase.auth().onAuthStateChanged(() => {
+  if (!app) {
+    app = new Vue({
+      router,
+      store,
+      render: (h) => h(App),
+    }).$mount('#app');
+  }
+});

@@ -72,8 +72,6 @@ export default class Recipes extends Vue {
         // console.log(process.env.VUE_APP_GOOGLE_ID)
     }
 }
-
-
 </script>
 <style lang="scss">
 
